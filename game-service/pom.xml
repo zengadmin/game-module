@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.fyqz</groupId>
+		<artifactId>game-module</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.fyqz</groupId>
+	<artifactId>game-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>game-service</name>
+	<description>game-service</description>
+
+
+	<dependencies>
+		<dependency>
+		<groupId>com.fyqz</groupId>
+		<artifactId>game-common</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+		<dependency>
+			<groupId>com.fyqz</groupId>
+			<artifactId>game-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fyqz</groupId>
+			<artifactId>user-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- 引入 SpringMVC 相关依赖，并实现对其的自动配置 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- 引入 Spring Cloud Alibaba Nacos Discovery 相关依赖，将 Nacos 作为注册中心，并实现对其的自动配置 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!-- 引入 Spring Cloud Alibaba Dubbo 相关依赖，实现呢 Dubbo 进行远程调用，并实现对其的自动配置 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-dubbo</artifactId>
+		</dependency>
+		<!--swagger 最新依赖内置版本-->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-models</artifactId>
+			<version>${swagger.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger.core.version}</version>
+		</dependency>
+
+		<!--swagger 依赖-->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.fox.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-annotation</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-extension</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.jsqlparser</groupId>
+			<artifactId>jsqlparser</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.1.11</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

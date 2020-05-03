@@ -1,0 +1,78 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: game-service # Spring 应用名
+  cloud:
+    nacos:
+      # Nacos 作为注册中心的配置项
+      discovery:
+        server-addr: 127.0.0.1:8848 # Nacos 服务器地址 "'lb://'+serviceId"
+  devtools:
+     restart:
+        trigger-file: trigger.txt
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      druid:
+          url: jdbc:mysql://127.0.0.1:3306/runto?serverTimezone=UTC&useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=utf8
+          username: root
+          password: root
+          initial-size: 10
+          max-active: 100
+          min-idle: 10
+          max-wait: 60000
+          max-pool-prepared-statement-per-connection-size: 20
+          time-between-eviction-runs-millis: 60000
+          min-evictable-idle-time-millis: 300000
+          #validation-query: SELECT 1 FROM DUAL
+          test-while-idle: true
+          test-on-borrow: false
+          test-on-return: false
+          stat-view-servlet:
+              enabled: true
+              url-pattern: /druid/*
+              login-username: admin
+              login-password: admin
+          filter:
+              stat:
+                  log-slow-sql: true
+                  slow-sql-millis: 1000
+                  merge-sql: false
+              wall:
+                  config:
+                      multi-statement-allow: true
+
+
+# Dubbo 配置项，对应 DubboConfigurationProperties 类
+dubbo:
+  scan:
+    base-packages: com.fyqz.*.service.impl # 指定 Dubbo 服务实现类的扫描基准包
+  # Dubbo 服务暴露的协议配置，对应 ProtocolConfig Map
+  protocols:
+    dubbo:
+      name: dubbo # 协议名称
+      port: 20881 # 协议端口，-1 表示自增端口，从 20880 开始
+  # Dubbo 服务注册中心配置，对应 RegistryConfig 类
+  registry:
+    address: spring-cloud://127.0.0.1:8848 # 指定 Dubbo 服务注册中心的地址
+  # Spring Cloud Alibaba Dubbo 专属配置项，对应 DubboCloudProperties 类
+  cloud:
+    subscribed-services: user-service # 设置订阅的应用列表，默认为 * 订阅所有应用。
+  provider: # Dubbo 服务端配置
+    retries: 0 # 远程服务调用重试次数, 不包括第一次调用, 不需要重试请设为0
+    timeout: 600000 # 远程服务调用超时时间(毫秒)
+    dynamic: true # 服务是否动态注册, 如果设为false, 注册后将显示后disable状态, 需人工启用, 并且服务提供者停止时, 也不会自动取消册, 需人工禁用.
+    delay: -1 # 延迟注册服务时间(毫秒)- , 设为-1时, 表示延迟到Spring容器初始化完成时暴露服务
+    version: 1.0.0 # 服务版本
+  consumer: # Dubbo 消费端配置
+    check: false
+    version: 1.0.0 # 默认版本
+
+
+#日志级别
+log:
+  console:
+    level: debug
+  logHome: /home/fyqzweb/yq/fyqz-ez
+

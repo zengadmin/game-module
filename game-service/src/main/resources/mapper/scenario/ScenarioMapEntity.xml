@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fyqz.scenario.mapper.ScenarioMapMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fyqz.scenario.entity.ScenarioMapEntity">
+    <result column="id" property="id" />
+        <result column="map_id" property="mapId" />
+        <result column="map_url" property="mapUrl" />
+        <result column="desic_name" property="desicName" />
+        <result column="description" property="description" />
+        <result column="hexagon_width" property="hexagonWidth" />
+        <result column="layer_hexagon_name" property="layerHexagonName" />
+        <result column="name" property="name" />
+        <result column="x_min" property="xMin" />
+        <result column="x_max" property="xMax" />
+        <result column="y_min" property="yMin" />
+        <result column="y_max" property="yMax" />
+        <result column="srs" property="srs" />
+        <result column="unit" property="unit" />
+        <result column="resolutions" property="resolutions" />
+        <result column="son_layer" property="sonLayer" />
+        <result column="layer_label_name" property="layerLabelName" />
+        <result column="centercoordinate" property="centercoordinate" />
+        <result column="create_by" property="createBy" />
+        <result column="limit_extent" property="limitExtent" />
+        <result column="status" property="status" />
+        <result column="status_del" property="statusDel" />
+        <result column="create_time" property="createTime" />
+        <result column="last_edit_time" property="lastEditTime" />
+        <result column="last_edit_by" property="lastEditBy" />
+        <result column="param1" property="param1" />
+        <result column="param2" property="param2" />
+        <result column="param3" property="param3" />
+        <result column="param4" property="param4" />
+        <result column="param5" property="param5" />
+        <result column="param6" property="param6" />
+        <result column="min_zoom" property="minZoom" />
+        <result column="max_zoom" property="maxZoom" />
+        <result column="zoom" property="zoom" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        map_id, map_url, desic_name, description, hexagon_width, layer_hexagon_name, name, x_min, x_max, y_min, y_max, srs, unit, resolutions, son_layer, layer_label_name, centercoordinate, create_by, limit_extent, status, status_del, create_time, last_edit_time, last_edit_by, param1, param2, param3, param4, param5, param6, min_zoom, max_zoom, zoom
+    </sql>
+
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fyqz.scenario.mapper.ScenarioMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fyqz.scenario.entity.ScenarioEntity">
+    <result column="id" property="id" />
+        <result column="scenario_name" property="scenarioName" />
+        <result column="scenario_start_time" property="scenarioStartTime" />
+        <result column="scenario_end_time" property="scenarioEndTime" />
+        <result column="map_id" property="mapId" />
+        <result column="scenario_desc" property="scenarioDesc" />
+        <result column="scenario_status" property="scenarioStatus" />
+        <result column="op_id" property="opId" />
+        <result column="status" property="status" />
+        <result column="ctime" property="ctime" />
+        <result column="utime" property="utime" />
+        <result column="ver" property="ver" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        scenario_name, scenario_start_time, scenario_end_time, map_id, scenario_desc, scenario_status, op_id, status, ctime, utime, ver
+    </sql>
+
+</mapper>
