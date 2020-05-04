@@ -3,6 +3,8 @@ package com.fyqz.scenario.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fyqz.base.BaseModel;
 import java.time.LocalDateTime;
+import java.util.Date;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -28,10 +30,10 @@ public class ScenarioEntity extends BaseModel {
 	private String scenarioName;
 
     @ApiModelProperty(value = "想定开始时间")
-	private LocalDateTime scenarioStartTime;
+	private Date scenarioStartTime;
 
     @ApiModelProperty(value = "想定结束时间")
-	private LocalDateTime scenarioEndTime;
+	private Date scenarioEndTime;
 
     @ApiModelProperty(value = "地图id")
 	private String mapId;
@@ -49,10 +51,10 @@ public class ScenarioEntity extends BaseModel {
 	private Integer status;
 
     @ApiModelProperty(value = "创建时间")
-	private LocalDateTime ctime;
+	private Date ctime;
 
     @ApiModelProperty(value = "修改时间")
-	private LocalDateTime utime;
+	private Date utime;
 
     @ApiModelProperty(value = "版本号")
 	private Integer ver;

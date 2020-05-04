@@ -18,7 +18,7 @@ public class ScenarioForm implements Serializable {
 
     @ApiModelProperty(value = "想定id")
     @NotBlank(message="想定id不能为空")
-    private String id;
+    private Long id;
     /**
      * 想定名称
      */
