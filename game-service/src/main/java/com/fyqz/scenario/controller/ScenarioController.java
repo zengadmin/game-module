@@ -2,12 +2,9 @@ package com.fyqz.scenario.controller;
 
 
 import com.fyqz.base.BaseController;
-import com.fyqz.scenario.form.ScenarioForm;
 import com.fyqz.scenario.form.ScenarioPageForm;
-import com.fyqz.scenario.service.IScenarioMapService;
 import com.fyqz.scenario.service.IScenarioService;
 import com.fyqz.user.entity.SystemUserEntity;
-import com.fyqz.user.service.ISystemUserService;
 import fyqz.result.Result;
 import fyqz.result.ResultUtil;
 import fyqz.util.LogUtil;
@@ -16,7 +13,6 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**

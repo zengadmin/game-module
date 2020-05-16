@@ -97,13 +97,13 @@ public class GeneratorUtil {
                         .setSuperEntityColumns(new String[]{"id"})
                         .setEntityBooleanColumnRemoveIsPrefix(true)
                         // 自定义 mapper 父类
-                        // .setSuperMapperClass("com.baomidou.demo.TestMapper")
+                         .setSuperMapperClass("com.fyqz.base.BaseMapper")
                         // 自定义 service 父类
                         // .setSuperServiceClass("com.baomidou.demo.TestService")
                         // 自定义 service 实现类父类
                         // .setSuperServiceImplClass("com.baomidou.demo.TestServiceImpl")
                         // 自定义 controller 父类
-                        // .setSuperControllerClass("com.baomidou.demo.TestController")
+                         .setSuperControllerClass("com.fyqz.base.BaseController")
                         // 【实体】是否生成字段常量（默认 false）
                         // public static final String ID = "test_id";
                         .setEntityColumnConstant(true)
@@ -115,7 +115,7 @@ public class GeneratorUtil {
                         // Boolean类型字段是否移除is前缀处理
                         // .setEntityBooleanColumnRemoveIsPrefix(true)
                         .setRestControllerStyle(true)
-                // .setControllerMappingHyphenStyle(true)
+                        // .setControllerMappingHyphenStyle(true)
         ).setPackageInfo(
                 // 包配置
                 new PackageConfig()

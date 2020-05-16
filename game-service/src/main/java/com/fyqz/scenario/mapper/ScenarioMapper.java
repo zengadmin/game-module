@@ -1,7 +1,7 @@
 package com.fyqz.scenario.mapper;
 
+import com.fyqz.base.BaseMapper;
 import com.fyqz.scenario.entity.ScenarioEntity;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
