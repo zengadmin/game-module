@@ -30,10 +30,9 @@ import java.util.Collections;
 
 
 /**
- * 代码生成器演示
+ * 代码生成器
  *
- * @author hubin
- * @since 2016-12-01
+ * @author 曾超
  */
 public class GeneratorUtil {
 
