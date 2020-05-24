@@ -96,7 +96,7 @@ public class GeneratorUtil {
                         .setSuperEntityColumns(new String[]{"id"})
                         .setEntityBooleanColumnRemoveIsPrefix(true)
                         // 自定义 mapper 父类
-                         .setSuperMapperClass("com.fyqz.base.BaseMapper")
+                        // .setSuperMapperClass("com.fyqz.base.BaseMapper")
                         // 自定义 service 父类
                         // .setSuperServiceClass("com.baomidou.demo.TestService")
                         // 自定义 service 实现类父类
